@@ -1,0 +1,15 @@
+$primaryColor: #6c16f8 !default;
+$primaryLightColor: rgba(108, 22, 248, 0.5) !default;
+$primaryDarkColor: #5d07e9 !default;
+$primaryDarkerColor: #5106cc !default;
+$primaryTextColor: #0f0e13 !default;
+
+$highlightBg: rgba(108, 22, 248, 0.16) !default;
+$highlightTextColor: rgba(255, 255, 255, 0.87) !default;
+$paginatorHighlightBg: #f9f9f9 !default;
+$paginatorHighlightTextColor: #0f0e13 !default;
+
+@import '../_variables';
+@import './_fonts';
+@import '../../../../theme-base/_components';
+@import '../_extensions';

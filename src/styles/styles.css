@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;600;700&display=swap');
+
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #22262e #000000;
+}
+
+* {
+  font-family: 'Roboto Flex', sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-color: #22262e #000000;
+  scrollbar-width: thin;
+}
+
+/* stripe elements base styling */
+.StripeElement,
+.StripeElementIdeal,
+.StripeElementP24,
+.StripeElementEPS,
+.StripeElementFpx {
+  font-family: Roboto Flex;
+  display: block;
+  margin: 10px 0 20px 0;
+  max-width: 500px;
+  padding: 10px 10px;
+  color: var(--text-color-secondary);
+}
+
+/* prime react stepper base styles */
+
+.p-steps-item > a {
+  background-color: transparent !important;
+}
+.p-steps-item::before {
+  background-color: var(--surface-d) !important;
+}
+
+.p-steps-number {
+  background-color: var(--surface-100);
+  color: var(--text-color);
+}
+
+.p-steps-item[aria-selected='true'] > a > .p-steps-number {
+  background-color: var(--surface-c);
+  color: var(--primary-color-text);
+}
+
+/* Scroll style */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--surface-d);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}

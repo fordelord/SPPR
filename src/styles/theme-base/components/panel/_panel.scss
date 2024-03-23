@@ -1,0 +1,35 @@
+.p-panel {
+  .p-panel-header {
+    padding: $panelHeaderPadding;
+    background: $panelHeaderBg;
+    color: $panelHeaderTextColor;
+    border-top-right-radius: $borderRadius;
+    border-top-left-radius: $borderRadius;
+
+    .p-panel-title {
+      font-weight: $panelHeaderFontWeight;
+    }
+  }
+
+  &.p-panel-toggleable {
+    .p-panel-header {
+      padding: $panelToggleableHeaderPadding;
+    }
+  }
+
+  .p-panel-content {
+    border-top: 1px solid $shade600;
+    background: $panelContentBg;
+    color: $panelContentTextColor;
+    border-bottom-right-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+  }
+
+  .p-panel-footer {
+    padding: $panelFooterPadding;
+    border: $panelFooterBorder;
+    background: $panelFooterBg;
+    color: $panelFooterTextColor;
+    border-top: 0 none;
+  }
+}

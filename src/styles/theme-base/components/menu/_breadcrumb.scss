@@ -1,0 +1,57 @@
+.p-breadcrumb {
+  background: $breadcrumbBg;
+  border: $breadcrumbBorder;
+  padding: $breadcrumbPadding;
+
+  .p-breadcrumb-list {
+    .p-breadcrumb-home {
+      color: $breadcrumbLastItemTextColor;
+    }
+
+    .p-menuitem {
+      color: $breadcrumbLastItemTextColor;
+      height: $breadcrumbHeight;
+      display: flex;
+    }
+
+    li {
+      .p-menuitem-link {
+        transition: $listItemTransition;
+        padding: $breadcrumbHomePadding;
+        background-color: $breadcrumbBackgroundColor;
+        border-radius: $breadcrumbItemBorderRadius;
+
+        &:hover {
+          background-color: #ffffff1a;
+        }
+
+        &:focus-visible {
+          @include focused();
+        }
+
+        .p-menuitem-text {
+          color: $breadcrumbItemTextColor;
+        }
+
+        .p-menuitem-icon {
+          color: $breadcrumbItemIconColor;
+        }
+      }
+
+      &.p-menuitem-separator {
+        margin: 0 $breadcrumbSeparatorMargin 0 $breadcrumbSeparatorMargin;
+        color: $breadcrumbSeparatorColor;
+      }
+
+      &:last-child {
+        .p-menuitem-text {
+          color: $breadcrumbLastItemTextColor;
+        }
+
+        .p-menuitem-icon {
+          color: $breadcrumbLastItemIconColor;
+        }
+      }
+    }
+  }
+}
