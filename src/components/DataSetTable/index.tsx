@@ -20,7 +20,7 @@ const DataSetTable: React.FC = () => {
   const [AValue, setAValue] = useState<number | null>(null);
   const [BValue, setBValue] = useState<number | null>(null);
 
-  const [isButtonDisable, setIsButtonDisable] = useState<boolean>(false);
+  const [isButtonDisable, setIsButtonDisable] = useState<boolean>(true);
 
   const toast = useRef<Toast>(null);
 
@@ -41,7 +41,7 @@ const DataSetTable: React.FC = () => {
   };
 
   const handleSaveClick = () => {
-    if (AValue && BValue) {
+    if ((AValue || AValue === 0) && (BValue || BValue === 0)) {
       setTableValue((prev) => {
         const lastSetNumber = prev[prev.length - 1].setNumber;
 
@@ -57,11 +57,11 @@ const DataSetTable: React.FC = () => {
   };
 
   useEffect(() => {
-    if (AValue && BValue) {
+    if ((AValue || AValue === 0) && (BValue || BValue === 0)) {
+      setIsButtonDisable(false);
+    } else {
       setIsButtonDisable(true);
     }
-
-    setIsButtonDisable(false);
   }, [AValue, BValue]);
 
   return (
@@ -83,9 +83,7 @@ const DataSetTable: React.FC = () => {
           minFractionDigits={2}
           maxFractionDigits={2}
           onChange={(event) => {
-            const inputNumber = Number(event.value);
-
-            setAValue(validNumbersValue(inputNumber));
+            setAValue(validNumbersValue(event.value));
           }}
           onBlur={(event) => {
             const inputNumber = Number(event.target.value);
@@ -101,9 +99,7 @@ const DataSetTable: React.FC = () => {
           minFractionDigits={2}
           maxFractionDigits={2}
           onChange={(event) => {
-            const inputNumber = Number(event.value);
-
-            setBValue(validNumbersValue(inputNumber));
+            setBValue(validNumbersValue(event.value));
           }}
           onBlur={(event) => {
             const inputNumber = Number(event.target.value);
