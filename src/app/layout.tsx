@@ -11,7 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>
+      <body className='relative min-h-screen p-[12px]'>
         <PrimeReactProvider>{children}</PrimeReactProvider>
       </body>
     </html>
