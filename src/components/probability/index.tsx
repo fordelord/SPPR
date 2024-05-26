@@ -79,8 +79,8 @@ const Probability = () => {
 
       <div className='flex gap-[10px]'>
         Output signal [
-        {outputSignal.map((signal) => {
-          return <div>{signal}, </div>;
+        {outputSignal.map((signal, index) => {
+          return <div key={index}>{signal}, </div>;
         })}
         ]
       </div>
