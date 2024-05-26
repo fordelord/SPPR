@@ -5,7 +5,7 @@ import { InputNumber } from 'primereact/inputnumber';
 import { Toast } from 'primereact/toast';
 import React, { useRef, useState } from 'react';
 
-import { outputSignal } from '@/components/probability/constants';
+import { outputSignal, YValue } from '@/components/probability/constants';
 import { calculateCountOfIterations, getOutputYSignal } from '@/components/probability/helpers';
 
 const Probability = () => {
@@ -76,6 +76,8 @@ const Probability = () => {
         />
         <Button label='Calculate result' onClick={handleClick} />
       </div>
+
+      <div>Current Y value: {YValue}</div>
 
       <div>Current input: [0.5, 0.1, 1]</div>
 
