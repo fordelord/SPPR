@@ -77,6 +77,8 @@ const Probability = () => {
         <Button label='Calculate result' onClick={handleClick} />
       </div>
 
+      <div>Current input: [0.5, 0.1, 1]</div>
+
       <div className='flex gap-[10px]'>
         Output signal [
         {outputSignal.map((signal, index) => {
